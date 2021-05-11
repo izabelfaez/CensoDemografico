@@ -79,7 +79,8 @@ for (i in uf){
 con <- microdados_censo(i)
 
 #selecao dos dados desejados - olhar na documentacao, se coloca: substr(V1,posicao inciail, int+dec) `Cod Variável`
-dados <- data.table(dbGetQuery(con, "select substr(V1, 29, 16) `V0010`, substr(V1, 8, 13) `V0011`, substr(V1, 21, 8) `V0300`, substr(V1, 154, 2) `V0633`, substr(V1, 158, 1) `V6400`, substr(V1, 3, 5) `V0002`, substr(V1,62,3) `V6036` from PESSOAS"))
+dados <- data.table(dbGetQuery(con, "select substr(V1, 29, 16) `V0010`, substr(V1, 8, 13) `V0011`, substr(V1, 21, 8) `V0300`, 
+substr(V1, 154, 2) `V0633`, substr(V1, 158, 1) `V6400`, substr(V1, 3, 5) `V0002`, substr(V1,62,3) `V6036` from PESSOAS"))
 
 #coluna para marcar a UF
 dados$uf<-i
