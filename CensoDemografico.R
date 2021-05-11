@@ -132,3 +132,4 @@ df1$df<-"sem instrução e fundamental incompleto"
 df<-rbind(df,df1)
 
 write.csv(df,'fund.csv')
+
